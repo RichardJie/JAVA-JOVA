@@ -1,0 +1,16 @@
+什么时候都不要，只不过有时候有错觉而已，列如
+
+   return new Runnable() {    
+        public void run() {    
+           Link link=new Link();
+           link.initNet();
+           String str=null;
+           Scanner sc=new Scanner(System.in);
+           link.rt.start();
+           while(true){
+               str=sc.nextLine();
+               link.input(str);
+
+           }
+        }    
+    };    //这里有一个分号在{}后面，但其实是return  XXX ；的分号，这个分号对应的不是{},而是return。；也是一个语句，称之为空语句，你在什么地方加都可以，一般都是用来做结束语句，表示结束int N=0;这样，没有其他的意义
